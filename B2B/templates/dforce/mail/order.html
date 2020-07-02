@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+
+    * {margin: 0;padding: 0;}
+    body, html {font-family: Arial,Helvetica,sans-serif;font-style: normal;font-size: 11px;color: #727272;}
+    a { text-decoration: none; font-size: 14px; }
+    .info { width:230px;height: 230px; }
+    img { border-width: 0; }
+    ol, ul {list-style: none;}
+    .clearall { clear: both; }
+
+    h1 { font-size: 16px; color: #0055A5; margin-bottom: 16px; }
+
+    #content { padding-top: 20px; }
+    #footer { color: #000; }
+
+    .inputpanel td { padding: 5px; }
+
+    
+    table#order-result, table#order-header, table.mailheader, table.mailfooter { width: 700px; padding:0; margin:0; table-layout: fixed; border-collapse: collapse; border-spacing: 0; }
+        table#order-result td, table#order-result th { padding: 5px; }
+        table#order-result .order1-3 { width: 150px; }
+        table#order-result .order2-3 { width: 420px; }
+        table#order-result .order3-3 { width: 60px; }
+        table#order-result .order-description { display:block; padding-bottom: 15px; font-size: 14px; font-weight: bold; }
+        table#order-result .order-size-list { font-size: 12px; }
+        table#order-result strong { color: #000; }
+        table#order-result .orderitem3-3 { text-align: right; font-size: 14px; font-weight: bold; color: #004793; padding-right: 15px; }
+        table#order-result tr.header { background-color: #000; color: #fff; }
+        table#order-result tr.order-alternate { background-color: #fff8bd; }
+        table#order-header tr { background-color: #edf3f8; }
+        table#order-header td { padding: 10px; }
+        table#order-header td.order-header-left { width: 70%; }
+        table#order-header td.order-header-right { text-align: right; width: 30%; }
+        table#order-header td.totalprice { font-size: 16px; font-weight: bold; color: #000; }
+            span.total-discount { width: 78px; display: inline-block; color: #ffe500; }
+            span.total-price { width: 78px; display: inline-block; font-weight: bold; }
+
+    </style>
+</head>
+<body>
+	<table class="mailheader">
+		<tr>
+			<td  align="center" valign="top" style="text-align:center;" >
+				<div align="center">
+					<table width="660" border="0" cellspacing="0" cellpadding="0">
+						<tr><td><img src="http://b2b.bel-confect.be/images/DFORCE_logoDEF_baseline.jpg" border="0" /></td></tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<table class="mailheader">
+		<tr>
+			<td  align="center" valign="top" style="text-align:center;background-color:#000;" >
+				<div align="center">
+					<table width="660" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="500" align="left" valign="top" style="padding-top:0px;padding-right:10px;padding-bottom:0px;padding-left:20px;" >
+								<h1 style="color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:22px;font-weight:bold;" >Order ##ORDERNUMBER##</h1>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+    </table>
+    <table id="order-header">
+        <tr>
+            <td class="order-header-left">##DELIVERADDRESS##</td>
+            <td class="order-header-right totalprice">##TOTALGENERALPRICE##</td>
+        </tr>
+
+        <tr>
+            <td class="order-header-left">##DISCOUNTTEXT##</td>
+            <td class="order-header-right totalprice"><span class="total-discount">##DISCOUNTPRICE##</span></td>
+        </tr>
+        <tr>
+            <td class="order-header-left">##TOTALPRICETEXT##</td>
+            <td class="order-header-right totalprice"><span class="total-price">##TOTALPRICE##</span></td>
+        </tr>
+
+    </table>
+    <table id="order-result">
+        <tr class="header">
+            <th class="order1-3">##IMAGECOLUMN##</th>
+            <th class="order2-3">##DESCRIPTIONCOLUMN##</th>
+            <th class="order3-3">##PRICECOLUMN##</th>
+        </tr>
+        ##ORDERLINES##
+    
+<!--                <tr>
+                    <td><img id="OrderDetail_rpt_ctl00_Img" src="/images/no-image-available.jpg" /></td>
+                    <td>
+                        <span class="order-description">416 - rally royalblauw</span>
+                        <span class="order-size-list">Maten: <strong>42</strong> (x5)</span>
+                    </td>
+                    <td class="orderitem3-3">&euro; 245,85</td>
+                </tr>-->
+        
+
+    </table>
+	<table class="mailfooter">
+		<tr>
+			<td align="center" valign="top" style="background-color:#000;border-bottom: #ffe500 3px solid;padding: 5px 0;" >
+				<div align="center">
+					<table width="660" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" >
+						<tr>
+							<td align="left" valign="top" style="padding-top:0px;padding-right:10px;padding-bottom:0px;padding-left:20px;color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;" >
+								D-Force NV, Avenue du Bois Jacquet 9, B-7711 Dottignies | Tel. 00 32 (0)56 64 43 67 | <a href="mailto:info@d-force.eu" style="color: #ffffff">info@d-force.eu</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
